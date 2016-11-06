@@ -1,0 +1,16 @@
+
+1) CREATE DATABASE testTommy;
+
+2) USE testTommy;
+
+3) CREATE USER 'admin'@'localhost' IDENTIFIED BY 'mysqladmin';
+
+4) GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+
+5) CREATE TABLE users_tbl (
+user_id INT(11) NOT NULL AUTO_INCREMENT,
+user_name VARCHAR(35) NOT NULL,
+user_password VARCHAR(35) NOT NULL,
+PRIMARY KEY (user_id),
+UNIQUE(user_name)
+) ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8;
